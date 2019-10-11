@@ -1,0 +1,187 @@
+
+
+.homepage {
+   position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100% !important;
+    height: 100vh;
+    border: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+    .Home_Button  {
+      position: fixed;
+      top: 48px;
+      left: 48px;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+    }
+    .Menu_Button_Container  {
+      position: fixed;
+      top: 48px;
+      right: 48px;
+      z-index: 2;
+    }
+    .Menu_Button  {
+          opacity: 1;
+           -webkit-animation: eltdfItemFadeIn 1s cubic-bezier(.34,.52,.57,1.04) forwards;
+          -moz-animation: eltdfItemFadeIn 1s cubic-bezier(.34,.52,.57,1.04) forwards;
+           animation: eltdfItemFadeIn 1s cubic-bezier(.34,.52,.57,1.04) forwards;
+    }
+    .Menu_Line  {
+      position: absolute;
+    height: 1px;
+    width: 33px;
+    background-color: currentColor;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    color: white;
+    }
+    .bannervideocountainer  {
+      position: relative;
+      left:0;
+      background-color: black;
+      height: 90vh;
+      padding: 0;
+      min-height: 25rem;
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      border: none;
+    }
+        .bannervideosource  {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: 0;
+          border: none;
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+        }
+            
+
+    .Intro_Row {
+      z-index: 1;
+      overflow: hidden;
+      background-color:blue;
+    }
+      .Intro_Row_Background {
+          width: 100%;
+          left: 0;
+          top: 0;
+          transition: .5s;        
+      } 
+            .Home_Logo {
+              width: 800px;
+              
+              z-index: 1;
+
+            }
+            .Subtitle {
+              color: white;
+              font-size: 24px;
+              font-weight: 100;
+              font-family: 'Chromatica', 'Arial', sans-serif;
+              position: absolute;
+              width: 800px;
+              height: auto;
+              left: calc(50% - 400px);
+              top: calc(55%);
+              z-index: 1;
+              padding: 0 48px;
+            }
+
+
+
+
+
+
+
+
+    .Grid_List  {
+      z-index: 1;
+      overflow: hidden;
+    }
+     
+          .Project_Image  {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: .5s; 
+          }
+
+
+
+
+
+
+  .Footer_Row {
+      padding: 0px;
+      margin: 0px;
+      background-color: rgb(61, 61, 61);
+      z-index: 1;
+
+  }
+    .Contact_Column, .Portfolio_Column, .Link_Column {
+      font-family: Chromatica-Regular!important;
+      color: #EEEEEE;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      -webkit-font-smoothing: antialiased;
+      background: 0 0;
+      border: 0;
+      margin: 0;
+      outline: 0;
+      padding: 0;
+      vertical-align: baseline;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+#scrollbar_style::-webkit-scrollbar {
+    width: 8px;
+} 
+#scrollbar_style::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(230, 80, 115)),
+									   color-stop(0.72, rgb(196, 104, 186)),
+									   color-stop(0.86, rgb(154, 129, 222)));
+}
+#scrollbar_style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0);
+	border-radius: 0px;
+}
+
+
+
+.pink {
+  background-color: pink;
+}
+
+
+
