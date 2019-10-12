@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit, OnChanges {
   MouseOverActiveIndex = -1;
   DistanceFromTop = 0;
   Parallaxer = '0px';
-  parallaxRatio = .2;
+  parallaxRatio = .3;
 
   constructor(private scrollDispatcher: ScrollDispatcher, private cdr: ChangeDetectorRef) {    
     this.scrollDispatcher.scrolled().subscribe((x: any) => {
