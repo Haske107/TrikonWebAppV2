@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 
 
@@ -16,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MatCardModule, MatGridListModule,
+  imports:      [ BrowserModule, FormsModule, MatCardModule, MatGridListModule, ScrollDispatchModule,
   
   RouterModule.forRoot([
     {path: '', component: HomeComponent},

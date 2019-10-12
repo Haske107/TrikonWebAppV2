@@ -1,6 +1,6 @@
-<div class="homepage " id="scrollbar_style">
+<div class="homepage" id="scrollbar_style" cdkScrollable >
   
-  <img src="https://drive.google.com/uc?export=view&id=1t2pg9FBEmsZ6sxe-gqttKAnCoLdrNuSz" alt="" class="Home_Button">
+  <img src="https://drive.google.com/uc?export=view&id=1t2pg9FBEmsZ6sxe-gqttKAnCoLdrNuSz" alt="" class="Home_Button" appParallax>
 
   <div class="Menu_Button_Container">
     <span class="Menu_Button">
@@ -26,31 +26,29 @@
 	</div>
 
 
-
-
-    <div class="Intro_Row row">
-      <div class="col">
-        <h5 class="Subtitle" >Trikon is a boutique production company and international               network of nomadic        artists delivering organic cinematic content 
-      </h5>
-      <img src="https://drive.google.com/uc?export=view&id=1xVpnTOogdqiawCp7MT6SvcQro-gDUn8M"  alt="" class="Intro_Row_Background">
-      </div>
-      <img src="https://drive.google.com/uc?export=view&id=19hwISQUnphdGrKSfHKVaeXOlqjhog5bJ" alt="" class="Home_Logo">
-      
+  <div class="Intro_Row row">
+    <div class="col Intro_Row_Column">
+        <img src="https://drive.google.com/uc?export=view&id=19hwISQUnphdGrKSfHKVaeXOlqjhog5bJ" alt="" class="Home_Logo">
+        <h5 class="Subtitle" >Trikon is a boutique production company and international network of nomadic artists delivering organic cinematic content 
+        </h5>
+          <img  [ngStyle]="{'top': getParallax()}" src="https://drive.google.com/uc?export=view&id=1xVpnTOogdqiawCp7MT6SvcQro-gDUn8M"  alt="" class="Intro_Row_Background">
     </div>
+   
+  </div>
 
+  
 
-
-
-
-
-
-
-  <mat-grid-list cols="4" rowHeight="1:1" class="Grid_List row">
-      <mat-grid-tile class="tile" *ngFor="let Project of ProjectIDs; index as i;" (mouseover)="MouseOverActiveIndex = i">
-        <img src="{{GoogleBaseLink + Project}}" alt="" class="Project_Image">
-        <img src="{{GoogleBaseLink + TitledProjectIDs[i]}}" alt="" class="Project_Image Titled" [ngStyle]="{'opacity': MouseOverActiveIndex != i ? '0' : '1'}">
-      </mat-grid-tile>
-  </mat-grid-list>
+  <div class="row">
+    <div class="col">
+      <mat-grid-list cols="4" rowHeight="1:1"  class="Grid_List">
+            <mat-grid-tile class="tile" *ngFor="let Project of ProjectIDs; index as i;" (mouseover)="MouseOverActiveIndex = i" (mouseout)="MouseOverActiveIndex = -1">
+            <img src="{{GoogleBaseLink + Project}}" alt="" class="Project_Image">
+            <img src="{{GoogleBaseLink + TitledProjectIDs[i]}}" alt="" class="Project_Image Titled" [ngStyle]="{'opacity': MouseOverActiveIndex != i ? '0' : '1'}">
+         </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+  
 
 
 
@@ -64,7 +62,7 @@
     </div>
 
     <div class="Link_Column col">
-<img src="https://img.icons8.com/material/96/000000/twitter-squared.png">
+      <img src="https://img.icons8.com/material/96/000000/twitter-squared.png">
       <p>© Copyright 2019 Trikon. All Rights Reserved. </p>
     </div>
     <div class="col Contact_Column">
@@ -76,11 +74,13 @@
             E: <a href="mailto:contact@trikonstaging.wpengine.com">contact@trikonstaging.wpengine.com</a>
         </p>
     </div>
-    
+
   </div>
+
 </div>
 	
 
-  
+
+
 
 

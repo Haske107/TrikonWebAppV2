@@ -1,11 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnChanges, ChangeDetectionStrategy, ChangeDetectorRef } from "@angular/core";
+import { ScrollDispatcher } from '@angular/cdk/scrolling';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges {
+
+  
+
+
+
   //Projects
   Acapella = "1jgddUwNk72BuXGTVT8uXdvH0aw0e9cA0";
   AcapellaTitled = "1Cn6hX8GvrawGXZoqzJZ7CJ1ZGpGHv5zL";
@@ -58,8 +65,25 @@ export class HomeComponent implements OnInit {
 
   //CONTROL VARIABLES
   MouseOverActiveIndex = -1;
+  DistanceFromTop = 0;
+  Parallaxer = '0px';
+  parallaxRatio = .2;
 
-  constructor() {}
-
+  constructor(private scrollDispatcher: ScrollDispatcher, private cdr: ChangeDetectorRef) {    
+    this.scrollDispatcher.scrolled().subscribe((x: any) => {
+      this.DistanceFromTop = x.elementRef.nativeElement.scrollTop;
+      this.Parallaxer = (0 - (this.DistanceFromTop * this.parallaxRatio)) + 'px'
+      cdr.detectChanges();
+      console.log(this.Parallaxer);
+    });
+  }
   ngOnInit() {}
+
+  ngOnChanges() {
+    console.log("Changes!");
+  }
+
+  getParallax() {
+    return this.Parallaxer;
+  }
 }
